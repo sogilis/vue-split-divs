@@ -30,11 +30,13 @@
     <template>
       <split-pane v-on:resize="resize" :min-percent='20' split="vertical" :resizer-class-name="resizer">
         <template slot="paneL">
-          <div class="ok">A</div> 
+          <div>A</div> 
         </template>
 
-        <template slot="resize">
-          ...
+        <template slot="resizer">
+            <div class="dot">.</div>
+            <div class="dot">.</div>
+            <div class="dot">.</div>
         </template>
 
         <template slot="paneR">

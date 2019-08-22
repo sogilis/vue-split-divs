@@ -11,7 +11,7 @@
       :split="split" 
       @mousedown.native="onMouseDown" 
       @click.native="onClick">
-      <slot name="resize"></slot>
+      <slot name="resizer"></slot>
     </resizer>
 
     <pane class="splitter-pane splitter-paneR" :split="split" :style="{ [type]: 100-percent+'%'}">
