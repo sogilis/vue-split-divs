@@ -1,5 +1,7 @@
 <template>
-	<div :class="classes"></div>
+	<div :class="classes">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
@@ -11,7 +13,11 @@
         },
         required: true
       },
-      className: String
+      className: {
+        type: String,
+        requirded: false,
+        default: null
+      }
     },
     computed: {
       classes() {

@@ -1,8 +1,8 @@
 {
-  "name": "vue-splitpane",
-  "description": "vue split-pane component",
+  "name": "vue-split-divs",
+  "description": "vue split-divs component",
   "version": "1.0.4",
-  "author": "Pan <panfree23@gmail.com>",
+  "author": "Sogilis <abonnements@sogilis.com>",
   "main": "dist/vue-split-pane.min.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --content-base='./demo/'",
@@ -10,7 +10,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "license": "MIT",
-  "homepage": "file:///Users/jiachenpan/www/Github/PanJiaChen.github.io/split-pane/demo/index.html",
+  "homepage": "https://github.com/sogilis/vue-split-divs",
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",

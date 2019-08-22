@@ -5,11 +5,19 @@
       <slot name="paneL"></slot>
     </pane>
 
-    <resizer :className="className" :style="{ [resizeType]: percent+'%'}" :split="split" @mousedown.native="onMouseDown" @click.native="onClick"></resizer>
+    <resizer 
+      :className="resizerClassName" 
+      :style="{ [resizeType]: percent+'%'}" 
+      :split="split" 
+      @mousedown.native="onMouseDown" 
+      @click.native="onClick">
+      <slot name="resize"></slot>
+    </resizer>
 
     <pane class="splitter-pane splitter-paneR" :split="split" :style="{ [type]: 100-percent+'%'}">
       <slot name="paneR"></slot>
     </pane>
+
     <div class="vue-splitter-container-mask" v-if="active"></div>
   </div>
 </template>
@@ -36,7 +44,11 @@
         },
         required: true
       },
-      className: String
+      resizerClassName: {
+        type: String,
+        requirded: false,
+        default: null      
+      }
     },
     computed: {
       userSelect() {
