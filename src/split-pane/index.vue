@@ -34,6 +34,11 @@
         type: Number,
         default: 10
       },
+      maxPercent: {
+        type: Number,
+        default: 100,
+        required: false
+      },
       defaultPercent: {
         type: Number,
         default: 50
@@ -112,7 +117,11 @@
           const percent = Math.floor(((currentPage - offset) / targetOffset) * 10000) / 100
 
           if (percent > this.minPercent && percent < 100 - this.minPercent) {
-            this.percent = percent
+            if (percent > this.maxPercent) {
+              this.percent = this.maxPercent
+            } else {
+              this.percent = percent
+            }
           }
 
           this.$emit('resize')
