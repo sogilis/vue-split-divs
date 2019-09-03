@@ -8,8 +8,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vue-split-pane.min.js',
-    library: 'SplitPane',
+    filename: 'vue-split-divs.min.js',
+    library: 'SplitDivs',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
