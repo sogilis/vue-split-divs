@@ -1,7 +1,7 @@
-import Splitpane from './split-pane/index.vue'
+import SplitDivs from './split-divs/index.vue'
 
-export default Splitpane
+export default SplitDivs
 
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.component('split-pane', Splitpane)
+  window.Vue.component('split-divs', SplitDivs)
 }
